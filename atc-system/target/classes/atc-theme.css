@@ -1,0 +1,269 @@
+/* =========================================================================
+   ATC Tactical Command Center — Premium Enterprise theme
+   Palette:
+     background : #0d1117   (matte deep slate)
+     panel      : #161b22   (premium navy-gray)
+     border     : #30363d   (subtle muted gray)
+     text       : #c9d1d9   (high-contrast silver-white)
+     muted      : #8b949e   (steel gray telemetry / coordinates / distances)
+     cyan       : #58a6ff   (normal operations: active routes, normal flights)
+     amber      : #d29922   (proximity conflict / separation alerts)
+     coral      : #f85149   (critical emergency)
+     mint       : #56d364   (operational success: landed / safe)
+   ========================================================================= */
+
+.root {
+    -fx-base-cyan: #58a6ff;
+    -fx-base-orange: #d29922;
+    -fx-base-red: #f85149;
+    -fx-base-green: #56d364;
+    -fx-base-bg: #0d1117;
+    -fx-base-panel: #161b22;
+    -fx-base-border: #30363d;
+    -fx-base-text: #c9d1d9;
+    -fx-base-muted: #8b949e;
+
+    -fx-background-color: #0d1117;
+    -fx-font-family: "Share Tech Mono", "Roboto Mono", "Consolas", monospace;
+    -fx-text-fill: #c9d1d9;
+    -fx-font-size: 12px;
+}
+
+/* ---- Root shell / background grid -------------------------------------- */
+.app-shell {
+    -fx-background-color: #0d1117;
+}
+
+/* Faint low-opacity tactical grid painted behind the whole shell */
+.background-grid {
+    -fx-stroke: rgba(48, 54, 61, 0.4);
+    -fx-stroke-width: 1;
+}
+
+/* ---- Glassmorphic panels ------------------------------------------------ */
+.glass-panel {
+    -fx-background-color: rgba(22, 27, 34, 0.85);
+    -fx-border-color: #30363d;
+    -fx-border-width: 1px;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-padding: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(88, 166, 255, 0.12), 12, 0.1, 0, 0);
+}
+
+.panel-title {
+    -fx-text-fill: #c9d1d9;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-underline: false;
+    -fx-effect: dropshadow(gaussian, rgba(88, 166, 255, 0.35), 6, 0.2, 0, 0);
+    -fx-padding: 0 0 6 0;
+}
+
+.section-divider {
+    -fx-background-color: #30363d;
+    -fx-pref-height: 1px;
+    -fx-max-height: 1px;
+}
+
+/* ---- Labels -------------------------------------------------------------*/
+.field-label {
+    -fx-text-fill: #8b949e;
+    -fx-font-size: 11px;
+}
+
+.hud-readout {
+    -fx-text-fill: #58a6ff;
+    -fx-font-size: 11px;
+}
+
+.status-ok {
+    -fx-text-fill: #56d364;
+}
+
+.status-warning {
+    -fx-text-fill: #d29922;
+}
+
+.status-emergency {
+    -fx-text-fill: #f85149;
+    -fx-effect: dropshadow(gaussian, rgba(248, 81, 73, 0.6), 5, 0.3, 0, 0);
+}
+
+/* ---- Buttons ------------------------------------------------------------*/
+.neon-button {
+    -fx-background-color: rgba(88, 166, 255, 0.08);
+    -fx-border-color: #58a6ff;
+    -fx-border-width: 1px;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+    -fx-text-fill: #58a6ff;
+    -fx-font-family: "Share Tech Mono", "Consolas", monospace;
+    -fx-font-size: 11px;
+    -fx-cursor: hand;
+    -fx-padding: 6 14 6 14;
+}
+
+.neon-button:hover {
+    -fx-background-color: rgba(88, 166, 255, 0.20);
+    -fx-effect: dropshadow(gaussian, rgba(88, 166, 255, 0.5), 8, 0.3, 0, 0);
+}
+
+.neon-button:pressed {
+    -fx-background-color: rgba(88, 166, 255, 0.35);
+}
+
+.neon-button-danger {
+    -fx-background-color: rgba(248, 81, 73, 0.10);
+    -fx-border-color: #f85149;
+    -fx-border-width: 1px;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+    -fx-text-fill: #f85149;
+    -fx-font-family: "Share Tech Mono", "Consolas", monospace;
+    -fx-font-size: 11px;
+    -fx-cursor: hand;
+    -fx-padding: 6 14 6 14;
+}
+
+.neon-button-danger:hover {
+    -fx-background-color: rgba(248, 81, 73, 0.22);
+    -fx-effect: dropshadow(gaussian, rgba(248, 81, 73, 0.55), 8, 0.3, 0, 0);
+}
+
+/* ---- ComboBox / TextField ------------------------------------------------*/
+.combo-box, .text-field {
+    -fx-background-color: rgba(22, 27, 34, 0.7);
+    -fx-border-color: #30363d;
+    -fx-border-width: 1px;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+    -fx-text-fill: #c9d1d9;
+    -fx-font-family: "Share Tech Mono", "Consolas", monospace;
+    -fx-mark-color: #58a6ff;
+    -fx-prompt-text-fill: rgba(139, 148, 158, 0.7);
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #c9d1d9;
+    -fx-background-color: #161b22;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #161b22;
+    -fx-border-color: #30363d;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: rgba(88, 166, 255, 0.18);
+}
+
+.text-field {
+    -fx-highlight-fill: rgba(88, 166, 255, 0.35);
+}
+
+/* ---- TableView ------------------------------------------------------------*/
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #30363d;
+    -fx-border-width: 1px;
+    -fx-table-cell-border-color: rgba(48, 54, 61, 0.5);
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #161b22;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #30363d transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #c9d1d9;
+    -fx-font-weight: bold;
+    -fx-font-size: 10.5px;
+    -fx-alignment: center-left;
+}
+
+.table-row-cell {
+    -fx-background-color: rgba(22, 27, 34, 0.6);
+    -fx-text-fill: #ffffff;
+    -fx-table-cell-border-color: rgba(48, 54, 61, 0.3);
+}
+
+.table-view .table-cell {
+    -fx-text-fill: #ffffff;
+    -fx-alignment: CENTER-LEFT;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: rgba(88, 166, 255, 0.03);
+}
+
+.table-row-cell:selected {
+    -fx-background-color: rgba(88, 166, 255, 0.25);
+}
+
+.table-view .table-cell.status-emergency-cell {
+    -fx-text-fill: #f85149;
+    -fx-font-weight: bold;
+}
+
+.table-view .table-cell.status-active-cell {
+    -fx-text-fill: #58a6ff;
+}
+
+.table-view .table-cell.status-landed-cell {
+    -fx-text-fill: #56d364;
+}
+
+.table-view .table-cell.status-scheduled-cell {
+    -fx-text-fill: #8b949e;
+}
+
+/* ---- ScrollBars ------------------------------------------------------------*/
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: rgba(88, 166, 255, 0.3);
+    -fx-background-radius: 6px;
+}
+
+.scroll-bar .track {
+    -fx-background-color: rgba(88, 166, 255, 0.04);
+}
+
+/* ---- Event log terminal ------------------------------------------------- */
+.event-log {
+    -fx-control-inner-background: #0d1117;
+    -fx-background-color: #0d1117;
+    -fx-text-fill: #56d364;
+    -fx-font-family: "Share Tech Mono", "Consolas", monospace;
+    -fx-font-size: 10.5px;
+    -fx-border-color: rgba(86, 211, 100, 0.3);
+    -fx-border-width: 1px;
+}
+
+.event-log .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #56d364;
+    -fx-padding: 2 6 2 6;
+}
+
+.event-log .list-cell:odd {
+    -fx-background-color: rgba(86, 211, 100, 0.04);
+}
+
+/* ---- Split pane divider --------------------------------------------------*/
+.split-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.split-pane-divider {
+    -fx-background-color: #30363d;
+    -fx-padding: 0 1 0 1;
+}
