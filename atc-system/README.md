@@ -1,10 +1,11 @@
-# Smart Air Traffic Control & Flight Scheduling System
+# Air Traffic Control & Flight Scheduling System
 
-A JavaFX-based desktop application that simulates a **Smart Air Traffic Control (ATC) and Flight Scheduling System** through an interactive tactical command-center interface.
+A JavaFX-based desktop application that simulates an **Air Traffic Control (ATC) and Flight Scheduling System** through an interactive tactical command-center interface.
 
 The system combines **data structures, graph algorithms, flight scheduling, collision avoidance, emergency handling, database integration, multithreading, and real-time visualization** into a single air-traffic simulation based on a stylized map of Pakistan.
 
 The application demonstrates the practical use of **Dijkstra's shortest-path algorithm, PriorityQueue, HashMap, custom sorting algorithms, queues, multithreading, JDBC, and relational database design**.
+
 
 ---
 
